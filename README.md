@@ -40,7 +40,7 @@ Estrutura HTML padrão utilizada:
 O modelo de CSS é simples e com a finalidade de apenas ajudar a demonstrar o funcionamento do Slider.
 
 #CSS
-```sass
+```scss
 .slider {
   position: relative;
   width: 988px;
