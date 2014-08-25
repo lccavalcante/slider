@@ -28,7 +28,7 @@ Estrutura HTML padrão utilizada:
 ```
 
 #JAVASCRIPT
-```js
+```html
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="js/slider.js"></script>
 <script>
