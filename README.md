@@ -1,4 +1,4 @@
-slider
+Slider
 ======
 
 Slider em JavaScript de 1 a N posições, seguindo uma determinada estrutura HTML.
@@ -40,7 +40,7 @@ Estrutura HTML padrão utilizada:
 O modelo de CSS é simples e com a finalidade de apenas ajudar a demonstrar o funcionamento do Slider.
 
 #CSS
-```css
+```sass
 .slider {
   position: relative;
   width: 988px;
