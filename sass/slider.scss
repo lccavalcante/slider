@@ -1,0 +1,67 @@
+.slider {
+  position: relative;
+  width: 988px;
+  height: 400px;
+  text-align: center;
+
+  .wrapper {
+    border: 1px solid #ccc;
+    overflow: hidden;
+
+    .mask {
+      float: left;
+      width: auto;      
+
+      .slide {
+        float: left;
+        position: relative;
+        width: 988px;
+        height: 400px;
+
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        h2 {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          vertical-align: middle;
+          font-family: Arial;
+          font-size: 140px;
+          text-align: center;        
+          color: #ccc;
+          z-index: 1
+        }
+      }
+    }
+  }
+
+  .bullets {
+    display: inline-block;
+    min-width: 100px;
+    height: 10px;
+    
+
+    .bullet {
+      float: left;
+      width: 10px;
+      height: 10px;
+      margin: 10px;
+      background: #ccc;
+      border: none;
+      cursor: pointer;
+
+
+      &:hover {
+        background: #666;
+      }
+
+      &.active {
+        background: #666;
+      }
+    }
+  } 
+}
