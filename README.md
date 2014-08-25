@@ -7,6 +7,8 @@ O Padrão JavaScript adotado foi o Iterator e para a transição entre os slides
 
 Estrutura HTML padrão utilizada:
 
+#HTML
+```html
 <section id='sl01' class='slider'>
 	<div class='wrapper'>
 		<div class='mask'>
@@ -23,6 +25,16 @@ Estrutura HTML padrão utilizada:
 	</div>
 	<div class='bullets'></div>
 </section>
+```
+
+#JAVASCRIPT
+```js
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="js/slider.js"></script>
+<script>
+	var slider = Slider('sl01');
+	slider.init();
+</script>
+```
 
 O modelo de CSS é simples e com a finalidade de apenas ajudar a demonstrar o funcionamento do Slider.
-
