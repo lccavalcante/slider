@@ -5,6 +5,9 @@ Slider em JavaScript de 1 a N posições, seguindo uma determinada estrutura HTM
 
 O Padrão JavaScript adotado foi o Iterator e para a transição entre os slides está sendo usado o animate do jQuery.
 
+#Demo
+
+Demonstração via [jsfiddle](http://jsfiddle.net/ogmoura/6zgvw1qt/3/embedded/result/)
 
 #Utilização
 ```html
