@@ -1,0 +1,21 @@
+# EditorConfig file
+root = true
+
+# Set charset for all files
+[*]
+charset = utf-8
+
+# JS space indentation
+[*.js]
+indent_style = space
+indent_size  = 2
+
+# JS space indentation
+[*.css]
+indent_style = space
+indent_size  = 2
+
+# JS space indentation
+[*.html]
+indent_style = space
+indent_size  = 2
