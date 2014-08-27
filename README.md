@@ -10,10 +10,7 @@ O Padrão JavaScript adotado foi o Iterator e para a transição entre os slides
 Demonstração via [jsfiddle](http://jsfiddle.net/ogmoura/6zgvw1qt/embedded/result/)
 
 #Utilização
-```html
-<script src="js/slider.js"></script> 
-<script>
+```javascript
 	var slider = Slider('sl01');
 	slider.init();
-</script>
 ```
