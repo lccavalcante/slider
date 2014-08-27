@@ -8,6 +8,8 @@
 
 */
 function Slider (slider_id) {
+  "use strict";
+
   var index     = 0,
     slider    = document.getElementById(slider_id),
     slides    = slider.querySelectorAll('.slide'),
@@ -122,7 +124,7 @@ function Slider (slider_id) {
         if( src.nodeName.toLowerCase() === 'button' ) {         
           var el = src.getAttribute('id'),
             regex = /[0-9]/g,
-            pos = parseInt(el.match(regex));
+            pos = parseInt(el.match(regex), 10);
           // envia a posição do click para marcar o bullet como ativo 
           self.mark( cp_bullets.childNodes[pos] )
           // passamos a posição desejada para a função de click
@@ -132,4 +134,4 @@ function Slider (slider_id) {
       }, false);      
     }
   }
-};
+}
