@@ -7,7 +7,7 @@ O Padrão JavaScript adotado foi o Iterator e para a transição entre os slides
 
 #Demo
 
-Demonstração via [jsfiddle](http://jsfiddle.net/ogmoura/6zgvw1qt/3/embedded/result/)
+Demonstração via [jsfiddle](http://jsfiddle.net/ogmoura/6zgvw1qt/embedded/result/)
 
 #Utilização
 ```html
