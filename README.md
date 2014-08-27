@@ -11,6 +11,6 @@ Demonstração via [jsfiddle](http://jsfiddle.net/ogmoura/6zgvw1qt/embedded/resu
 
 #Utilização
 ```javascript
-	var slider = Slider('sl01');
-	slider.init();
+var slider = Slider('sl01');
+slider.init();
 ```
