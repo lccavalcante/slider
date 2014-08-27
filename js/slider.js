@@ -33,8 +33,6 @@ function Slider (slider_id) {
 		init: function () {
 			this.actions();
 			this.next();
-
-			console.log( this )
 		},		
 		next: function (pos) {
 			var el, bl;
@@ -91,9 +89,11 @@ function Slider (slider_id) {
 			});
 		},
 		toggle: function() {
+			var self = this;
 			this.clearTimer();
+			//interval 
 			t_name = setInterval( function() {
-				this.slider.next();						
+				self.next();						
 			} , time );
 		},
 		clearTimer: function () {

@@ -11,7 +11,7 @@ Demonstração via [jsfiddle](http://jsfiddle.net/ogmoura/6zgvw1qt/3/embedded/re
 
 #Utilização
 ```html
-<script src="js/slider.js"></script>
+<script src="js/slider.js"></script> 
 <script>
 	var slider = Slider('sl01');
 	slider.init();
