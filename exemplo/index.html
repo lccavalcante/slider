@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Slider - Pure JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="../dist/css/slider.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<!-- slider structure -->
+	<section id='sl01' class='slider'>
+		<div class='wrapper'>
+			<div class='mask'>
+				<div class='slide'>
+					<h2>slide 1</h2>
+				</div>
+				<div class='slide'>
+					<h2>slide 2</h2>
+				</div>
+				<div class='slide'>
+					<h2>slide 3</h2>
+				</div>
+			</div>
+		</div>
+		<div class='bullets'></div>
+	</section>
+	<!--/ slider structure -->
+	<script src="../dist/js/slider.min.js"></script>
+	<script>
+		var slider = Slider('sl01');
+		slider.init();
+	</script>
+</body>
+</html>
