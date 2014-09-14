@@ -1,7 +1,7 @@
 Slider
 ======
 
-Slider em JavaScript de 1 a N posições, seguindo uma determinada estrutura HTML.
+Slider em JavaScript de N itens por slider.
 
 O Padrão JavaScript adotado foi o Iterator e para a transição entre os slides está sendo usado o animate do jQuery.
 
