@@ -8,13 +8,63 @@
 
 */
 function Slider (slider_id) {
-  "use strict";
+  "use strict"; 
 
-  var index     = 0,
-    slider    = document.getElementById(slider_id),
-    slides    = slider.querySelectorAll('.slide'),
-    cp_bullets  = slider.querySelector('.bullets'),
-    wrapper   = slider.querySelector('.mask'),
+  var index   = 0,
+    addEvent = function(el, evt, fn, bubbles) {
+      bubbles = typeof bubbles === 'undefined' ?  true : bubbles;
+      // corrige o this dentro do callback.
+      function cb(e) { 
+        fn.call(el, e || window.event);
+      }
+      if ( el.addEventListener ) {
+        el.addEventListener(evt, cb, bubbles );
+      } else if ( el.attachEvent ) {
+        el.attachEvent(evt, cb);
+      } else {
+        el[evt] = cb;
+      }
+    },
+    selector = function(selector, context) {
+      var relExpr  = /^(?:(\w+)|#([\w-]+)|\.([\w-]+))$/,
+          match = selector.match(relExpr);
+
+      context = context || document;
+
+      if ( match ) {
+        if ( match[1] ) { // Tag
+          return context.getElementsByTagName(match[1]);
+        } else if ( match[2] ) { // #Id
+          return context.getElementById(match[2]);
+        } else { // .Classe
+          if ( context.querySelectorAll ) {
+            try {
+              return context.querySelectorAll(match[0]);
+            } catch(e) {}
+          } else {
+            return (context.getElementsByClassName || function(cName) {
+              var i = 0,
+                  elems = context.getElementsByTagName('*'),
+                  l = elems.length,
+                  results = [],
+                  clExpr = new RegExp("(^|\\b)" + cName + "(\\b|$)");
+
+              for (; i < l; i++) {
+                if (clExpr.test(elems[i].className)) {
+                  results.push(elems[i]);
+                }
+              }
+
+              return results;
+            })(match[3]);
+          }
+        }
+      } 
+    },
+    slider    = selector(slider_id),
+    slides    = selector('.slide', slider),
+    cp_bullets  = selector('.bullets', slider)[0],
+    wrapper   = selector('.mask', slider)[0],
     length    = slides.length,
     slide_w   = 988,
     slide_time  = 1000, 
@@ -110,15 +160,15 @@ function Slider (slider_id) {
     actions: function () {
       var self = this;
       // adicionamos o evento de mouseenter para limpar o intervalo ao passar o mouse
-      wrapper.addEventListener('mouseenter', function() { 
+      addEvent(wrapper, 'mouseenter', function() { 
         self.clearTimer();
       }, false);
       // adicionamos o evento de mouseleave para voltar com o intervalo ao retirar o mouse
-      wrapper.addEventListener('mouseleave', function() { 
+      addEvent(wrapper, 'mouseleave', function() { 
         self.setTimer();
       }, false);
 
-      cp_bullets.addEventListener('click', function (e) {
+      addEvent(cp_bullets, 'click', function (e) {
         var src = e.target || e.srcElement;       
         // se o filho for um button nós deixamos executar a função de click
         if( src.nodeName.toLowerCase() === 'button' ) {         
@@ -131,7 +181,7 @@ function Slider (slider_id) {
           self.click( pos );
         }
 
-      }, false);      
+      });      
     }
   }
 }
